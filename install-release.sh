@@ -67,7 +67,7 @@ if [[ "$(uname)" == 'Linux' ]]; then
         PACKAGE_MANAGEMENT_REMOVE='apt remove'
     elif [[ "$(command -v yum)" ]]; then
         PACKAGE_MANAGEMENT_UPDATE='yum makecache'
-        PACKAGE_MANAGEMENT_INSTALL='yum install'
+        PACKAGE_MANAGEMENT_INSTALL='yum -y install'
         PACKAGE_MANAGEMENT_REMOVE='yum remove'
         if [[ "$(command -v dnf)" ]]; then
             PACKAGE_MANAGEMENT_UPDATE='dnf makecache'
